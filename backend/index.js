@@ -15,7 +15,9 @@ app.use(express.json({ limit: "10mb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://quicktalk-sand.vercel.app/login",
+    origin: process.env.NODE_ENV === "development"
+      ? "http://localhost:5173" // ✅ Allow frontend origin in development
+      : "https://quicktalk-r7ki.onrender.com", // ✅ Allow frontend origin in production
     credentials: true, // ✅ Allow sending cookies
     methods: ["GET", "POST", "PUT", "DELETE"], // ✅ Allow necessary HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // ✅ Ensure required headers are allowed
