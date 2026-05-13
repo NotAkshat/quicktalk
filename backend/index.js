@@ -17,7 +17,7 @@ app.use(
   cors({
     origin: process.env.NODE_ENV === "development"
       ? "http://localhost:5173" // ✅ Allow frontend origin in development
-      : "https://quicktalk-r7ki.onrender.com", // ✅ Allow frontend origin in production
+      : "https://quicktalk-sand.vercel.app/", // ✅ Allow frontend origin in production
     credentials: true, // ✅ Allow sending cookies
     methods: ["GET", "POST", "PUT", "DELETE"], // ✅ Allow necessary HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // ✅ Ensure required headers are allowed
