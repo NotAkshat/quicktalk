@@ -15,7 +15,7 @@ app.use(express.json({ limit: "10mb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://quicktalk-sand.vercel.app/login",
     credentials: true, // ✅ Allow sending cookies
     methods: ["GET", "POST", "PUT", "DELETE"], // ✅ Allow necessary HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // ✅ Ensure required headers are allowed
